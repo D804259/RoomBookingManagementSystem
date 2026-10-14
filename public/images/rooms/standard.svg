@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+  <rect width="1200" height="800" fill="#d7c4a3"/>
+  <rect x="0" y="430" width="1200" height="370" fill="#b89b73"/>
+  <rect x="180" y="260" width="840" height="280" rx="8" fill="#f3e6d0"/>
+  <rect x="220" y="300" width="360" height="200" fill="#8b5e3c"/>
+  <rect x="640" y="300" width="340" height="90" fill="#c9a227"/>
+  <circle cx="980" cy="180" r="50" fill="#f7e7b0"/>
+  <text x="80" y="80" fill="#0c1b33" font-family="Georgia, serif" font-size="42">Standard Room</text>
+</svg>

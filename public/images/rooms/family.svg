@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+  <rect width="1200" height="800" fill="#ead9c0"/>
+  <rect x="80" y="200" width="480" height="240" fill="#8b5e3c"/>
+  <rect x="640" y="230" width="220" height="160" fill="#6d4c35"/>
+  <rect x="900" y="230" width="220" height="160" fill="#6d4c35"/>
+  <rect x="0" y="520" width="1200" height="280" fill="#cbb48e"/>
+  <text x="80" y="80" fill="#0c1b33" font-family="Georgia, serif" font-size="42">Family Room</text>
+</svg>

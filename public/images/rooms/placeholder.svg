@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#163056"/>
+      <stop offset="1" stop-color="#0c1b33"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#g)"/>
+  <rect x="80" y="140" width="1040" height="520" rx="24" fill="#1d3a66"/>
+  <rect x="140" y="210" width="420" height="280" rx="12" fill="#c9a227" opacity="0.85"/>
+  <rect x="620" y="210" width="420" height="120" rx="12" fill="#f6f1e8" opacity="0.2"/>
+  <rect x="620" y="360" width="280" height="130" rx="12" fill="#f6f1e8" opacity="0.12"/>
+  <text x="600" y="760" text-anchor="middle" fill="#c9a227" font-family="Georgia, serif" font-size="36">GrandStay Room</text>
+</svg>

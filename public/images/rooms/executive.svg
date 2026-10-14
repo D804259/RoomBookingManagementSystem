@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+  <rect width="1200" height="800" fill="#10233f"/>
+  <rect x="90" y="180" width="1020" height="500" fill="#1c3b66"/>
+  <rect x="140" y="240" width="380" height="220" fill="#c9a227"/>
+  <rect x="560" y="240" width="500" height="90" fill="#f6f1e8" opacity="0.18"/>
+  <rect x="560" y="360" width="240" height="160" fill="#0c1b33"/>
+  <text x="80" y="80" fill="#c9a227" font-family="Georgia, serif" font-size="42">Executive Room</text>
+</svg>
