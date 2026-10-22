@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display Elements</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: Roboto, Arial;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .thumbnail {
+            width: 300px;
+            object-fit: cover;
+        }
+
+        .search-bar {
+            font-size: 22px;
+            border-radius: 10px;
+            border: none;
+            box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.9);
+            display: block;
+        }
+
+        .condition {
+            font-family: arial;
+            font-size: 20px;
+            width: 500px;
+        }
+
+        .email-box {
+            font-size: 22px;
+            border-radius: 10px;
+            border: none;
+            box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.9);
+        }
+
+        .agree-button {
+            height: 40px;
+            width: 250px;
+            color: white;
+            background-color: rgb(8, 102, 196);
+            border: none;
+            border-radius: 18px;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        .agree-button:hover {
+            cursor: pointer;
+            background-color: rgb(255, 0, 0);
+            color: rgb(0, 0, 0);
+        }
+
+        .twitter-box {
+            height: 45px;
+            width: 355px;
+            display: flex;
+            align-items: center;
+            /* border:2px solid gray; */
+            box-shadow: 0px 0px 6px rgba(219, 11, 11, 0.9);
+            border-radius: 8px;
+        }
+
+        .tweet {
+            height: 30px;
+            width: 70px;
+            color: white;
+            background-color: rgb(10, 132, 180);
+            border: none;
+            border-radius: 14px;
+            font-weight: bold;
+        }
+
+        .cat {
+            width: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        input {
+            flex: 1;
+            border: none;
+            outline: none;
+        }
+
+        .para {
+            display: inline-block;
+            width: 200px;
+            vertical-align: middle;
+        }
+
+        .heading {
+            margin-left: 250px;
+            font-family: sans-serif;
+            font-size: 40px;
+            font-weight: bold;
+            margin-bottom: 0px;
+        }
+
+        .g,
+        .G {
+            color: rgb(0, 132, 255);
+        }
+
+        .o {
+            color: red;
+        }
+
+        .O {
+            color: gold;
+        }
+
+        .L {
+            color: green;
+        }
+
+        .E {
+            color: red;
+        }
+
+        .g-search {
+            margin-left: 110px;
+            height: 30px;
+            width: 400px;
+            margin-top: 8px;
+            box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.4);
+            border: none;
+            border-radius: 12px;
+            padding-left: 10px;
+            margin-bottom: 40px;
+            display: block;
+        }
+
+        .name {
+            height: 30px;
+            width: 180px;
+            border: 1px solid black;
+            border-radius: 5px;
+            margin-bottom: 8px;
+        }
+
+        .email {
+            height: 30px;
+            width: 370px;
+            border: 1px solid black;
+            border-radius: 5px;
+            display: block;
+        }
+
+        .signup {
+            display: block;
+            margin-top: 8px;
+            height: 46px;
+            width: 370px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 16px;
+            color: white;
+            background-color: royalblue;
+            border: none;
+        }
+
+        .uber {
+            height: 40px;
+            width: 370px;
+            border: none;
+            margin-bottom: 8px;
+            background-color: rgb(230, 227, 227);
+            display: block;
+        }
+
+        .request {
+            height: 45px;
+            width: 120px;
+            background-color: black;
+            color: white;
+            margin-left: 0px;
+            margin-right: 8px;
+            transition: 0.9s;
+            border: none;
+        }
+
+        .request:hover {
+            cursor: pointer;
+            background-color: gray;
+            color: black;
+        }
+
+        .schedule {
+            height: 45px;
+            width: 140px;
+            color: black;
+            border: none;
+        }
+
+        .red-square {
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            background-color: red;
+            margin: 8px 0px 0px 0px;
+        }
+
+        .green-circle {
+            height: 200px;
+            width: 200px;
+            border-radius: 100px;
+            border: 2px solid black;
+            background-color: rgb(0, 255, 21);
+            margin-top: 8px;
+        }
+
+        .border {
+            height: 100px;
+            width: 300px;
+            border: 1px solid gray;
+            margin-top: 8px;
+        }
+
+        .Yes,
+        No {
+            margin-left: 8px;
+        }
+
+        .new-para {
+            margin-left: 8px;
+        }
+
+        .para2 {
+            width: 420px;
+            margin-left: 8px;
+        }
+
+        .Install {
+            border: 2px solid black;
+            background-color: #1f1f1f;
+            display: inline-block;
+            color: white;
+            margin-top: 8px;
+            font-family: arial;
+        }
+
+        .h2 {
+            margin-left: 8px;
+            color: white;
+        }
+
+        .card {
+            width: 150px;
+            border: 1px solid#ddd;
+            padding-bottom: 10px;
+            box-shadow: 0px 1px 5px rgba(0, 0, 0.2);
+            margin-top: 8px;
+        }
+
+        .cat2 {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .name2 {
+            font-size: 18px;
+            margin: 8px 0 4px 8px;
+            font-weight: bold;
+        }
+
+        .friends {
+            color: gray;
+            margin: 0 0 8px 8 px;
+            margin-left: 8px;
+        }
+
+        .add {
+            background-color: #3875db;
+            color: white;
+            border: none;
+            margin-left: 8px;
+            border-radius: 3px;
+            height: 35px;
+            width: 100px;
+            cursor: pointer;
+
+            transition: background-color 0.3s;
+        }
+
+        .add:hover {
+            color: white;
+            background-color: black;
+        }
+
+        .card2 {
+            width: 124px;
+            height: 450px;
+            border: 1px solid #ddd;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            margin-top: 8px;
+            padding: 10px;
+        }
+
+        .bhuvi {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <img class="thumbnail" src="../images/thumbnail1.avif" />
+
+    <input class="search-bar" type="text" placeholder="Search" />
+    <br /><br />
+    <p>Email</p>
+    <input class="email-box" type="text" placeholder="Email" />
+    <p class="condition">
+        By clicking Agree & join , you agree to the privacy policy
+    </p>
+    <button class="agree-button">Agree & join</button>
+
+    <p>Twitter text box</p>
+    <div class="twitter-box">
+        <img class="cat" src="../images/cat.jpg" />
+        <input type="text" placeholder="What's happening?" />
+        <button class="tweet">Tweet</button>
+    </div>
+    <p class="para">
+        Thank for chatting with our customer support.would you like to take our
+        quick servey?
+    </p>
+
+    <button>Yes</button>
+    <button>No</button>
+
+    <p class="heading">
+        <span class="G">G</span><span class="o">o</span><span class="O">o</span><span class="g">g</span><span
+            class="L">l</span><span class="E">e</span>
+    </p>
+    <input class="g-search" type="text" placeholder="Search Google or type a URL" />
+
+    <input class="name" type="text" placeholder="First name" />
+    <input class="name" type="text" placeholder="last name" />
+    <input class="email" type="text" placeholder="Email" />
+    <button class="signup">Sign Up</button>
+    <h2>Request a ride now</h2>
+    <input class="uber" type="text" placeholder="Enter pickup location" />
+    <input class="uber" type="text" placeholder="enter destination" />
+    <button class="request">Request now</button>
+    <button class="schedule">Schedule for later</button>
+    <div class="red-square"></div>
+    <div class="green-circle"></div>
+
+    <div class="border">
+        <p class="new-para">Satisfied with our service?</p>
+        <button class="Yes">Yes</button>
+        <button class="No">No</button>
+    </div>
+    <div class="Install">
+        <p class="h2"><strong>Install Youtube Music</strong></p>
+        <p class="para2">
+            Add You Tube Music to your desktop for quick and easy access
+        </p>
+    </div>
+    <div class="card">
+        <img class="cat2" src="../images/cat2.jpg" />
+        <p class="name2">Oliver</p>
+        <p class="friends">2 mutual friends</p>
+        <button class="add">Add friends</button>
+    </div>
+
+    <div class="card2">
+        <img class="bhuvi" src="../images/profile.jpg" />
+        <p class="name3">Bhuvnesh Chaudhary</p>
+        <p class="friends">3 mutual friends</p>
+        <button class="add">Add Friend</button>
+    </div>
+    <style>
+        .video-preview3 {
+            display: flex;
+        }
+
+        .thumbnail3 {
+            width: 200px;
+
+        }
+
+        .thumbnail3:hover {
+            cursor: pointer;
+        }
+
+        .video-info3 {
+            width: 250px;
+            font-weight: 500px;
+            font-size: 14px;
+            margin-left: 8px;
+        }
+
+        .channel-name3 {
+            color: gray;
+            margin-bottom: 0px;
+            font-size: 15px;
+        }
+
+        .video-stats3 {
+            color: gray;
+            margin-top: 4px;
+            font-size: 14px;
+            ;
+        }
+
+        .video-preview4 {
+            display: flex;
+        }
+
+        .thumbnail4 {
+            width: 200px;
+            display: flex;
+        }
+
+        .video-info4 {
+            font-weight: bold;
+            width: 300px;
+            font-size: 14px;
+        }
+    </style>
+
+    <div class="video-preview3">
+        <div>
+            <img class="thumbnail3" src="../images/thumbnail3.png">
+        </div>
+        <div class="video-info3">
+            <p>
+                <strong>How to compete against CS degrees (as a self taught dev)</strong>
+            </p>
+            <p class="channel-name3">
+                SuperSimpleDev
+            </p>
+            <p class="video-stats3">
+                1.5K views &middot; 4months ago
+            </p>
+        </div>
+    </div>
+
+    <div class="video-preview4">
+        <div>
+            <img class="thumbnail4" src="../images/thumbnail4.png">
+        </div>
+        <div class="video-info3">
+            <p>
+                <strong>Which programming language to learn first 2026(with charts)</strong>
+            </p>
+            <p class="channel-name3">
+                SuperSimpleDev
+            </p>
+            <p class="video-stats3">
+                5.7K views &middot; 11 months ago
+            </p>
+        </div>
+    </div>
+
+    <style>
+        .card3 {
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            width: 180px;
+            overflow: hidden;
+            margin-left: 200px;
+            margin-bottom: 50px;
+            border: 3px solid rgb(0, 0, 0);
+            border-radius: 6px;
+        }
+
+        .cat3 {
+            width: 200px;
+            height: 220px;
+        }
+
+        .friend-image {
+            width: 30px;
+            border-radius: 50%;
+            margin-left: 5px;
+            vertical-align: middle;
+        }
+
+        .friends3 {
+            color: gray;
+            display: inline;
+            margin-left: 10px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        .add3 {
+            background-color: #3875db;
+            color: white;
+            border: none;
+            margin-left: 8px;
+            border-radius: 3px;
+            height: 35px;
+            width: 100px;
+            cursor: pointer;
+            margin-top: 25px;
+            margin-bottom: 10px;
+
+            transition: background-color 0.25s, transform 0.25s;
+        }
+
+        .add3:hover {
+            background-color: #5c8ee5;
+            transform: translateY(-1px);
+        }
+
+        .name3 {
+            margin-left: 5px;
+            margin-bottom: 5px;
+        }
+
+        .mutual-friend {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+    <div class="card3">
+        <img class="cat3" src="../images/cat3.png">
+        <p class="name3">
+            <Strong>Oliver</Strong>
+        </p>
+        <div class="mutual-friend">
+            <img class="friend-image" src="../images/friend-image.png">
+
+            <p class="friends3">
+                2 mutual friends
+            </p>
+        </div>
+        <button class="add3">
+            Add Friend
+        </button>
+    </div>
+
+    <style>
+        .card4 {
+            margin-left: 100px;
+            width: 200px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.12);
+            padding: 18px;
+            margin-bottom: 20px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card4:hover {
+            transform: translateY(-3px);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.16);
+        }
+
+        .cat4 {
+            width: 180px;
+            height: 180px;
+            display: block;
+            margin-left: 10px;
+            overflow: hidden;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .name4 {
+            margin-left: 5px;
+            margin-top: 10px;
+            font-size: 22px;
+        }
+
+        .friends3 {
+            margin-top: 5px;
+        }
+
+        .friend-image {
+            margin-top: 5px;
+        }
+
+        .mutual-friend
+    </style>
+    <div class="card4">
+        <img class="cat4" src="../images/cat4.jpg">
+        <p class="name4">
+            <Strong>Mimi</Strong>
+        </p>
+        <div class="mutual-friend">
+            <img class="friend-image" src="../images/friend-image.png">
+            <p class="friends3">
+                5 mutual friends
+            </p>
+        </div>
+        <button class="add3">
+            Add Friend
+        </button>
+    </div>
+</body>
+
+</html>
