@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Adaptive Quiz & Scoring Experience: personalized adaptive practice, detailed results, and answer review."
+    />
+    <meta name="theme-color" content="#f5f7fb" />
+    <title>Adaptive Quiz &amp; Scoring Experience</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#" id="brand-home" aria-label="Adaptive Quiz dashboard">
+          <span class="brand-mark" aria-hidden="true">A</span>
+          <span>adaptive<span class="brand-light">.learn</span></span>
+        </a>
+        <nav class="main-nav" aria-label="Main navigation">
+          <button class="nav-link is-current" id="nav-dashboard" type="button">Dashboard</button>
+          <button class="nav-link" id="nav-history" type="button">My attempts</button>
+        </nav>
+        <div class="topbar-tag"><span class="status-dot"></span> Learning workspace</div>
+      </header>
+
+      <main>
+        <section id="screen-dashboard" class="screen" aria-labelledby="dashboard-title">
+          <div class="welcome-banner">
+            <div class="welcome-copy">
+              <p class="eyebrow eyebrow-light">YOUR PERSONAL LEARNING SPACE</p>
+              <h1 id="dashboard-title">Make every answer<br />move you forward.</h1>
+              <p>Practice at your pace. Your next question adapts to what you know.</p>
+              <button id="new-quiz" class="btn btn-white" type="button">
+                Create a quiz <span aria-hidden="true">→</span>
+              </button>
+            </div>
+            <div class="welcome-art" aria-hidden="true">
+              <div class="orbit orbit-one"></div>
+              <div class="orbit orbit-two"></div>
+              <div class="art-card">
+                <span class="art-check">✓</span>
+                <span class="art-card-label">Your progress</span>
+                <strong>One step at a time</strong>
+                <span class="art-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+              </div>
+              <span class="art-sparkle sparkle-one">✦</span>
+              <span class="art-sparkle sparkle-two">✧</span>
+            </div>
+          </div>
+
+          <section class="analytics-section" aria-labelledby="analytics-title">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">AT A GLANCE</p>
+                <h2 id="analytics-title">Your learning overview</h2>
+              </div>
+              <span id="analytics-updated" class="muted small-copy">Saved in this browser</span>
+            </div>
+            <div class="metrics-grid">
+              <article class="metric-card">
+                <span class="metric-icon icon-violet" aria-hidden="true">▦</span>
+                <div><p class="metric-label">Available quizzes</p><strong id="metric-topics">0</strong><span id="metric-topic-note" class="metric-foot">Across your learning topics</span></div>
+              </article>
+              <article class="metric-card">
+                <span class="metric-icon icon-blue" aria-hidden="true">◷</span>
+                <div><p class="metric-label">Completed quizzes</p><strong id="metric-completed">0</strong><span class="metric-foot">Your practice sessions</span></div>
+              </article>
+              <article class="metric-card">
+                <span class="metric-icon icon-green" aria-hidden="true">↗</span>
+                <div><p class="metric-label">Best score</p><strong id="metric-best">—</strong><span class="metric-foot">Across saved attempts</span></div>
+              </article>
+              <article class="metric-card">
+                <span class="metric-icon icon-amber" aria-hidden="true">◎</span>
+                <div><p class="metric-label">Average accuracy</p><strong id="metric-accuracy">—</strong><span class="metric-foot">Answered questions only</span></div>
+              </article>
+            </div>
+          </section>
+
+          <section class="dashboard-lower">
+            <article class="content-card recent-card">
+              <div class="section-heading compact-heading">
+                <div><p class="eyebrow">KEEP YOUR MOMENTUM</p><h2>Recent attempts</h2></div>
+                <button id="dashboard-history" class="text-button" type="button">View all <span aria-hidden="true">→</span></button>
+              </div>
+              <div id="recent-attempts" class="recent-list"></div>
+            </article>
+            <aside class="content-card focus-card">
+              <span class="focus-icon" aria-hidden="true">✦</span>
+              <p class="eyebrow">BUILT AROUND YOU</p>
+              <h2>A smarter kind of practice.</h2>
+              <p>Questions adjust as you go, so every session finds the right level of challenge.</p>
+              <ul class="focus-list">
+                <li><span>✓</span> No repeated questions</li>
+                <li><span>✓</span> Explanations for every answer</li>
+                <li><span>✓</span> Results stay saved in this browser</li>
+              </ul>
+            </aside>
+          </section>
+        </section>
+
+        <section id="screen-setup" class="screen" hidden aria-labelledby="setup-title">
+          <button id="setup-back" class="back-link" type="button"><span aria-hidden="true">←</span> Dashboard</button>
+          <div class="setup-layout">
+            <div class="setup-intro">
+              <p class="eyebrow">A SESSION THAT FITS YOU</p>
+              <h1 id="setup-title">Set your learning<br />intentions.</h1>
+              <p>Choose a focus and we’ll tailor the questions to your pace and confidence.</p>
+              <div class="setup-note"><span aria-hidden="true">✦</span><p>Your difficulty will adapt as you answer, while your starting level guides the first question.</p></div>
+            </div>
+            <form id="setup-form" class="content-card setup-form">
+              <div class="form-heading"><span class="step-number">01</span><div><p class="eyebrow">QUIZ DETAILS</p><h2>Make it yours</h2></div></div>
+              <label for="learner-name">Student name</label>
+              <input id="learner-name" name="learnerName" type="text" maxlength="40" autocomplete="name" placeholder="e.g. Alex Morgan" required />
+              <label for="subject-input">Subject</label>
+              <input id="subject-input" name="subject" type="text" maxlength="60" placeholder="e.g. Computer Science" required />
+              <div class="form-grid">
+                <div><label for="topic-select">Topic</label><select id="topic-select" name="topic" required></select></div>
+                <div><label for="difficulty-select">Starting difficulty</label><select id="difficulty-select" name="difficulty" required>
+                  <option value="Easy">Easy</option><option value="Medium" selected>Medium</option><option value="Hard">Hard</option>
+                </select></div>
+              </div>
+              <div class="form-grid">
+                <div><label for="length-select">Number of questions</label><input id="length-select" name="questionCount" type="number" min="1" max="72" value="10" required /><p id="question-availability" class="field-hint" aria-live="polite"></p></div>
+                <div><label for="duration-select">Time limit (minutes)</label><input id="duration-select" name="durationMinutes" type="number" min="1" max="180" value="15" required /></div>
+              </div>
+              <p id="setup-error" class="form-error" role="alert" hidden></p>
+              <button id="start-quiz" class="btn btn-primary btn-wide" type="submit">Start my quiz <span aria-hidden="true">→</span></button>
+              <p class="form-footnote"><span aria-hidden="true">◷</span> Your timer starts as soon as your first question appears.</p>
+            </form>
+          </div>
+        </section>
+
+        <section id="screen-quiz" class="screen" hidden aria-labelledby="question-text">
+          <div class="quiz-topline">
+            <button id="quit-quiz" class="back-link" type="button"><span aria-hidden="true">×</span> Exit quiz</button>
+            <div class="quiz-session"><span class="status-dot"></span><span id="quiz-session-label">Practice session</span></div>
+            <div id="timer" class="timer" role="timer" aria-live="off"><span aria-hidden="true">◷</span><span id="timer-value">15:00</span></div>
+          </div>
+          <div class="quiz-progress-row">
+            <span id="progress-label">Question 1 of 10</span>
+            <span id="completion-label">0 answered</span>
+          </div>
+          <div class="progress-track" role="progressbar" aria-label="Quiz completion" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+            <div id="progress-fill" class="progress-fill"></div>
+          </div>
+          <div class="quiz-layout">
+            <article class="content-card question-card">
+              <div class="question-meta">
+                <span id="topic-badge" class="badge badge-topic">Topic</span>
+                <span id="question-index" class="question-index">01 / 10</span>
+              </div>
+              <h1 id="question-text" tabindex="-1">Question</h1>
+              <p class="question-hint">Select an answer. You can change it before submitting the quiz.</p>
+              <div id="options" class="options" role="group" aria-label="Answer options"></div>
+              <div class="question-actions">
+                <button id="previous-question" class="btn btn-secondary" type="button"><span aria-hidden="true">←</span> Previous</button>
+                <div class="action-right">
+                  <button id="next-question" class="btn btn-primary" type="button">Next question <span aria-hidden="true">→</span></button>
+                  <button id="finish-quiz" class="btn btn-finish" type="button">Submit quiz</button>
+                </div>
+              </div>
+            </article>
+            <aside class="quiz-sidebar">
+              <article class="content-card palette-card">
+                <div class="sidebar-heading"><div><p class="eyebrow">YOUR QUIZ</p><h2>Question map</h2></div><span id="palette-count" class="count-pill">0 / 10</span></div>
+                <div id="question-palette" class="question-palette" aria-label="Question navigation"></div>
+                <div class="palette-legend"><span><i class="legend-current"></i>Current</span><span><i class="legend-done"></i>Answered</span><span><i class="legend-open"></i>Open</span></div>
+              </article>
+            </aside>
+          </div>
+        </section>
+
+        <section id="screen-results" class="screen" hidden aria-labelledby="results-title">
+          <div class="results-banner">
+            <div><p class="eyebrow eyebrow-light">SESSION COMPLETE</p><h1 id="results-title">A moment to celebrate.</h1><p id="results-greeting">Here’s how your practice went.</p></div>
+            <div class="result-score"><span>YOUR SCORE</span><strong id="result-score">0 <small>/ 0</small></strong><span id="result-percentage" class="score-percent">0% of available marks</span><span id="result-category" class="performance-pill">In progress</span><span id="result-status" class="attempt-status"></span></div>
+          </div>
+          <div id="result-summary" class="metrics-grid result-metrics"></div>
+          <article class="content-card result-ability-card">
+            <div><p class="eyebrow">ADAPTIVE PROGRESS</p><h2>Ability estimate through the quiz</h2><p class="muted small-copy">Your estimated ability updates as you answer each question.</p></div>
+            <canvas id="result-ability-chart" aria-label="Ability estimate through this quiz"></canvas>
+          </article>
+          <div class="results-layout">
+            <article class="content-card analysis-card">
+              <div class="section-heading compact-heading"><div><p class="eyebrow">PERFORMANCE BREAKDOWN</p><h2>What you practiced</h2></div></div>
+              <div class="analysis-columns"><section><h3>By topic</h3><div id="topic-stats" class="analysis-list"></div></section><section><h3>By difficulty</h3><div id="difficulty-stats" class="analysis-list"></div></section></div>
+            </article>
+            <aside class="content-card suggestions-card"><p class="eyebrow">YOUR NEXT BEST STEP</p><h2>Keep building</h2><div id="strengths-list"></div><div id="weaknesses-list"></div><div id="suggestions-list"></div></aside>
+          </div>
+          <div class="results-actions">
+            <button id="review-answers" class="btn btn-primary" type="button">Review answers <span aria-hidden="true">→</span></button>
+            <button id="retry-quiz" class="btn btn-secondary" type="button">Retry this quiz</button>
+            <button id="new-quiz-from-results" class="btn btn-secondary" type="button">New quiz</button>
+            <button id="results-to-dashboard" class="btn btn-text" type="button">Return to dashboard</button>
+          </div>
+        </section>
+
+        <section id="screen-review" class="screen" hidden aria-labelledby="review-title">
+          <button id="review-back" class="back-link" type="button"><span aria-hidden="true">←</span> Back to results</button>
+          <div class="section-heading review-heading"><div><p class="eyebrow">LEARN FROM EVERY QUESTION</p><h1 id="review-title">Answer review</h1><p id="review-subtitle" class="muted">See what you answered and why.</p></div><span id="review-total" class="count-pill">0 questions</span></div>
+          <div id="review-list" class="review-list"></div>
+          <div class="results-actions review-actions">
+            <button id="review-retry" class="btn btn-primary" type="button">Retry this quiz</button>
+            <button id="review-new-quiz" class="btn btn-secondary" type="button">New quiz</button>
+            <button id="review-dashboard" class="btn btn-text" type="button">Return to dashboard</button>
+          </div>
+        </section>
+
+        <section id="screen-history" class="screen" hidden aria-labelledby="history-title">
+          <div class="section-heading history-heading"><div><p class="eyebrow">YOUR LEARNING JOURNEY</p><h1 id="history-title">My attempts</h1><p class="muted">Your completed quizzes and performance analytics, saved in this browser.</p></div><button id="clear-history" class="btn btn-secondary" type="button">Clear history</button></div>
+          <section class="history-analytics" aria-labelledby="history-analytics-title">
+            <div class="section-heading compact-heading"><div><p class="eyebrow">YOUR PROGRESS</p><h2 id="history-analytics-title">Performance analytics</h2></div></div>
+            <div id="history-metrics" class="metrics-grid history-metrics"></div>
+            <div class="history-analysis-grid">
+              <article class="content-card history-chart-card">
+                <h3>Score progress</h3>
+                <p class="muted small-copy">Your latest quiz scores over time</p>
+                <canvas id="history-progress-chart" aria-label="Score progress across your latest quizzes"></canvas>
+              </article>
+              <article class="content-card history-topic-card">
+                <h3>Topic-wise performance</h3>
+                <div id="history-topic-stats" class="analysis-list"></div>
+              </article>
+            </div>
+          </section>
+          <div id="history-list" class="history-list"></div>
+          <button id="history-dashboard" class="back-link" type="button"><span aria-hidden="true">←</span> Dashboard</button>
+        </section>
+      </main>
+
+      <footer class="app-footer"><span class="brand-mark brand-mark-small" aria-hidden="true">A</span><span>Adaptive learning, one question at a time.</span><span>Designed for focused practice</span></footer>
+      <div id="app-announcement" class="sr-only" role="status" aria-live="polite"></div>
+    </div>
+    <script src="js/questions.js"></script>
+    <script src="js/adaptive.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/chart.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
